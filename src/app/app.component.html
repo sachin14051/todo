@@ -1,10 +1,11 @@
+<h1 class="bg-primary p-2 text-white">todo</h1>
 <div class="container">
   <div class="row">
-    <div class="col-md-6">3
-      <app-todoform></app-todoform>
+    <div class="col-md-6">
+      <app-todoform (formdataoutput)="formInput($event)"></app-todoform>
     </div>
     <div class="col-md-6">
-      <app-todolist></app-todolist>
+      <app-todolist [customArray]="todoArrayList"></app-todolist>
     </div>
   </div>
 </div>

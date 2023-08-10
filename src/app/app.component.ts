@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  todoArrayList:Array<string>=[]
   title = 'todo';
+
+
+
+ 
+  formInput(formdata:string){
+    // console.log(formdata)
+    localStorage.setItem("key", JSON.stringify(formdata))
+    this.todoArrayList.push(formdata);
+
+ 
+
+  }
+
 }

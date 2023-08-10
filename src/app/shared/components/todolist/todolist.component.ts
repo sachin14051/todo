@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 
 @Component({
   selector: 'app-todolist',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todolist.component.scss']
 })
 export class TodolistComponent implements OnInit {
-  listArray:Array<string>=["html","css","js"]
+ @Input() customArray !:Array<string>
   constructor() { }
 
   ngOnInit(): void {

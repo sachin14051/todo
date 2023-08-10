@@ -1,5 +1,9 @@
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let l of listArray" >
+<ul class="list-group" *ngIf="customArray.length >0 else para">
+    <li class="list-group-item" *ngFor="let l of customArray"  >
         {{l}}
     </li>
 </ul>
+
+<ng-template #para>
+    <p class="alert alert-info">no content add</p>
+</ng-template>
